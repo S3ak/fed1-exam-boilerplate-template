@@ -1,0 +1,25 @@
+{
+  "name": "fed1-exam-boilerplate-template",
+  "version": "1.0.0",
+  "description": "Front-end Development 1 Exam Template",
+  "scripts": {
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:e2e": "cypress run --e2e",
+    "test:component": "cypress run --component",
+    "test:watch": "cypress open --e2e --watch",
+    "test:ci": "cypress run --headless",
+    "format": "prettier --write \"**/*.{js,html,css}\"",
+    "lint": "eslint js/*.js"
+  },
+  "dependencies": {
+    "cypress": "^14.2.1"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.14.0",
+    "cypress-axe": "^1.6.0",
+    "eslint": "^8.51.0",
+    "eslint-plugin-cypress": "^2.15.1",
+    "prettier": "^3.0.3"
+  }
+}
