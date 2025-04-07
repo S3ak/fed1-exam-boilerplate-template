@@ -3,23 +3,28 @@
   "version": "1.0.0",
   "description": "Front-end Development 1 Exam Template",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "test": "cypress run",
-    "test:open": "cypress open",
-    "test:e2e": "cypress run --e2e",
-    "test:component": "cypress run --component",
-    "test:watch": "cypress open --e2e --watch",
-    "test:ci": "cypress run --headless",
+    "cypress:open": "cypress open",
+    "test:open": "start-server-and-test 'vite --port 3000' http://localhost:3000 cypress:open",
+    "test:e2e": "start-server-and-test 'vite --port 3000' http://localhost:3000 test",
+    "test:ci": "start-server-and-test 'vite --port 3000' http://localhost:3000 'cypress run --headless'",
     "format": "prettier --write \"**/*.{js,html,css}\"",
     "lint": "eslint js/*.js"
   },
   "dependencies": {
-    "cypress": "^14.2.1"
   },
   "devDependencies": {
+    "cypress": "^14.2.1",
     "@cypress/code-coverage": "^3.14.0",
     "cypress-axe": "^1.6.0",
     "eslint": "^8.51.0",
     "eslint-plugin-cypress": "^2.15.1",
-    "prettier": "^3.0.3"
+    "prettier": "^3.0.3",
+    "vite": "^6.2.0",
+    "start-server-and-test": "^2.0.11",
+    "wait-on": "^8.0.3"
   }
 }
